@@ -1,9 +1,11 @@
-import app from './app.js'
+import app from "./app.js";
+import connectDB from "./db/db.js";
 
-app.get('/', (req, resp) =>{
-    resp.send('Hello world')
-})
+connectDB();
 
-app.listen(3000)
-console.log('Server on port: ', 3000)
+app.get("/", (req, resp) => {
+  resp.send("Hello world");
+});
 
+app.listen(3000);
+console.log("Server on port: ", 3000);
